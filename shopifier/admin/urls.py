@@ -33,6 +33,8 @@ router.register(
 
 
 urlpatterns = [
+    url(r'^$', views.TemplateView.as_view(
+        template_name='index.html'), name='index'),
     url(r'^admin/templates/(?P<template_name>.+)$',
         views.AdminTemplateView.as_view()),
     url(r'^api/login/$',
@@ -63,5 +65,5 @@ urlpatterns = [
     url(r'^admin/', include(router.urls)),
     url(r'^admin/.*$',
         views.TemplateView.as_view(template_name='admin/admin-base.html'),
-        name='shopifier-admin')
+        name='shopifier-admin'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

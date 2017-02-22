@@ -685,18 +685,16 @@ form.input-form {
   color: #0078bd;
   background: #ffffff;
   border-radius: 3px;
-  border: 1px solid #d3dbe2; }
+  border: 1px solid #d3dbe2;
+  cursor: pointer; }
   .btn:hover {
-    cursor: pointer;
-    cursor: hand;
     background: #fafbfc; }
   .btn.disabled {
     background: #fafbfc;
     color: #d3dbe2;
     border-color: #d3dbe2;
-    pointer-events: none; }
-    .btn.disabled:hover {
-      cursor: default; }
+    pointer-events: none;
+    cursor: default; }
   .btn.btn-blue {
     background: #0069A6;
     border-color: #0069A6;
@@ -708,9 +706,8 @@ form.input-form {
       background: #fafbfc;
       border-color: #d3dbe2;
       color: #d3dbe2;
-      pointer-events: none; }
-      .btn.btn-blue.disabled:hover {
-        cursor: default; }
+      pointer-events: none;
+      cursor: default; }
   .btn.btn-red:hover {
     color: #ffffff;
     background: #ff5d5d;
@@ -735,7 +732,9 @@ form.input-form {
     right: 0;
     opacity: 0;
     filter: alpha(opacity=0);
-    cursor: pointer; }
+    cursor: pointer;
+    width: 100%;
+    height: 100%; }
   .btn.unit {
     border-radius: 0;
     border-left: none; }
@@ -744,6 +743,9 @@ form.input-form {
   .btn.unit-right {
     border-radius: 0 3px 3px 0;
     border-left: none; }
+
+::-webkit-file-upload-button {
+  cursor: pointer; }
 
 .cross {
   font-size: 15px;
@@ -1486,12 +1488,12 @@ tags popup > div > ul {
       vertical-align: inherit;
       text-align: left;
       background: transparent; }
+      .edit-variant-table > table td > .btn {
+        padding: 6px 10px;
+        text-align: right; }
       .edit-variant-table > table td:last-child {
         padding: 6px 0 6px 10px;
         text-align: end; }
-        .edit-variant-table > table td:last-child > .btn {
-          padding: 6px 10px;
-          text-align: right; }
     .edit-variant-table > table td {
       border-top: 1px solid #ebeef0; }
       .edit-variant-table > table td > input {
