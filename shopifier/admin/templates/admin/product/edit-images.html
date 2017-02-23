@@ -33,7 +33,7 @@
                     [attr.alt]="image.alt" 
                     [attr.data-type]="image.type"
                     [attr.id]="image.id">
-                </span>
+            </span>
             <div [ngClass]="{hide : currentImg!=image.id}">
                 <div class="row center" >
                     <a class="btn trash fa fa-eye" aria-hidden="true" title="Preview" (click)="showImage(image.id)"></a>
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </li>
-        <li *ngIf="images.length<1" class="hidden" ><span></span></li>
+        <li *ngIf="images.length<1" class="hidden"><span></span></li>
     </ul>
     <div *ngIf="images.length>11 && !showAllImages"class="row center mb20">
         <a class="ref" (click)="showAllImages=true">Show all images</a>
