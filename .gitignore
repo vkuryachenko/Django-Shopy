@@ -50,7 +50,8 @@ coverage.xml
 *.pot
 
 @angular/
-
+dragula/
+rxjs/
 
 # Django stuff:
 *.log
